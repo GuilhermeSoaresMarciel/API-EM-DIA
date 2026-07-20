@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>API EM DIA</title>
+
+    <link rel="stylesheet" href="./settings/style.css">
+
+    <link rel="shortcut icon" href="./res/img.png" type="image/png">
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1><span style="color: var(--color-v2);">API</span> EM DIA</h1>
+
+        <p>Teste suas APIs<a target="_blank" href="https://github.com/GuilhermeSoaresMarciel">(GitHub)</a></p>
+
+        <p>Developed by: <u>Guilherme Soares Marciel</u></p>
+
+    </header>
+
+    <main>
+
+        <section>
+
+            <h2>Requisição</h2>
+
+            <div class="form-group">
+
+                <label for="method-select">Método:</label>
+
+                <select id="method-select">
+
+                    <option value="GET">GET</option>
+
+                    <option value="POST">POST</option>
+
+                    <option value="PUT">PUT</option>
+
+                    <option value="DELETE">DELETE</option>
+
+                    <option value="PATCH">PATCH</option>
+
+                </select>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="url-input">URL:</label>
+
+                <input type="text" id="url-input" placeholder="URL">
+
+            </div>
+
+            <div class="tabs">
+
+                <button id="btn_open_Request_Body">Body</button>
+
+                <button id="btn_open_Request_Headers">Headers</button>
+
+            </div>
+
+            <div id="window_debug_request_body" class="tab-content">
+
+                <textarea id="request-body" placeholder="JSON Body">{"key": "value"}</textarea>
+
+            </div>
+
+            <div id="window_debug_request_headers" class="tab-content">
+
+                <textarea id="request-headers"
+                    placeholder="Content-Type: application/json">Content-Type: application/json</textarea>
+
+            </div>
+
+            <div class="tabs">
+
+                <button id="send-btn" class="btn-primary">ENVIAR</button>
+
+                <button id="clear-btn" class="btn-secondary">LIMPAR</button>
+
+            </div>
+
+        </section>
+
+        <section id="response-section" class="response-section" style="display: none;">
+
+            <h2>Resposta</h2>
+
+            <div class="tabs">
+
+                <span id="status-badge">Status: -</span>
+
+                <span id="response-time">Tempo: 0ms</span>
+
+                <span id="response-size">Tamanho: 0 B</span>
+
+            </div>
+
+            <div class="tabs">
+
+                <button id="btn_open_Response_Body">Body</button>
+
+                <button id="btn_open_Response_Headers">Headers</button>
+
+            </div>
+
+            <div id="window_debug_response_body" class="tab-content">
+
+                <div id="response-body" class="no-textarea">...</div>
+
+            </div>
+
+            <div id="window_debug_response_headers" class="tab-content">
+
+                <div id="response-headers-list" class="no-textarea">...</div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="./settings/scripts.js"></script>
+
+</body>
+
+</html>
